@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Bd_Myshipping>
+      <version>0.1.0</version>
+    </Bd_Myshipping>
+  </modules>
+  <global>
+    <helpers>
+      <myshipping>
+        <class>Bd_Myshipping_Helper</class>
+      </myshipping>
+    </helpers>
+	<models>
+	  <myshipping>
+		<class>Bd_Myshipping_Model</class>
+		<resourceModel>myshipping_mysql4</resourceModel>
+	  </myshipping>
+	</models>
+  </global>    
+	<default>
+        <carriers>
+            <custom_shipping>
+                <active>1</active>
+                <model>myshipping/carrier_custom_shipping</model>
+                <name>Sustom Shipping</name>
+                <title>Custom Shipping</title>
+                <description>Add extra shipping charge</description>
+                <sort_order>100</sort_order>
+            </custom_shipping>
+        </carriers>
+    </default>
+</config> 
